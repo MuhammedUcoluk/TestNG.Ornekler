@@ -14,12 +14,13 @@ public abstract class TestBase  {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
 
     }
     @AfterMethod
     public void tearndown(){
+
         driver.quit();
     }
 }
